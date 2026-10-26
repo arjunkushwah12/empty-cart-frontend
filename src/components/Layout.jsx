@@ -47,6 +47,10 @@ export default function Layout() {
 
           {/* Navigation Actions */}
           <div className="custom-nav-actions">
+            {/* Become a Seller (Header Placement) */}
+            <Link to="/register?role=seller" className="seller-nav-link">
+              <span></span> Become a Seller
+            </Link>
             {token ? (
               <>
                 <Link to="/profile" className="nav-link">Profile</Link>
@@ -116,7 +120,12 @@ export default function Layout() {
       <div>
         <h5 className="footer-column-title">Become a Partner</h5>
         <ul className="footer-links">
-          <li><a href="#" className="footer-link">Sell on EmptyCart</a></li>
+          <li>
+                  <Link to="/register?role=seller" className="footer-link footer-seller-highlight">
+                    Sell on EmptyCart (Become a Seller)
+                  </Link>
+                </li>
+          {/* <li><a href="#" className="footer-link">Sell on EmptyCart</a></li> */}
           <li><a href="#" className="footer-link">Supply to Us</a></li>
           <li><a href="#" className="footer-link">Affiliate Program</a></li>
         </ul>
